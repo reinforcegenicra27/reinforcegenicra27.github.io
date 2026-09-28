@@ -102,6 +102,27 @@
               <div class="column is-centered">
   <p style="text-align: left; font-size: 18px">Long-horizon manipulation has been a long-standing challenge in the robotics community. We propose ReinforceGen, a system that combines task decomposition, data generation, imitation learning, and motion planning to form an initial solution, and improves each component through reinforcement-learning-based fine-tuning. ReinforceGen first segments the task into multiple localized skills, which are connected through motion planning. The skills and motion planning targets are trained with imitation learning on a dataset generated from 10 human demonstrations, and then fine-tuned through online adaptation and reinforcement learning. When benchmarked on the Robosuite dataset, ReinforceGen reaches 80% success rate on all tasks with visuomotor controls in the highest reset range setting. Additional ablation studies show that our fine-tuning approaches contributes to an 89% average performance increase. Finally, ReinforceGen demonstrates significant improvement through fine-tuning in our real-world evaluations.</p>
               </div>
+
+                <details class="paper-viewer" id="paper-viewer">
+                  <summary>
+                    <span><i class="fas fa-file-pdf"></i>&nbsp; View full paper with appendix</span>
+                    <i class="fas fa-chevron-down paper-viewer-chevron"></i>
+                  </summary>
+                  <div class="paper-viewer-body">
+                    <iframe data-src="./resources/reinforcegen_main_paper_with_appendix.pdf" title="ReinforceGen paper with appendix"></iframe>
+                    <p class="paper-viewer-fallback">
+                      PDF not displaying?
+                      <a href="./resources/reinforcegen_main_paper_with_appendix.pdf" target="_blank" rel="noopener">Open it in a new tab</a>.
+                    </p>
+                  </div>
+                </details>
+                <script>
+                  // Load the PDF only when the viewer is first expanded.
+                  document.getElementById('paper-viewer').addEventListener('toggle', function () {
+                    var frame = this.querySelector('iframe');
+                    if (this.open && !frame.src) frame.src = frame.dataset.src;
+                  });
+                </script>
               
             </div>
           </div>
